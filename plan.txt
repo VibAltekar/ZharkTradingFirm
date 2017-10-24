@@ -1,0 +1,5 @@
+coinbase integration
+
+naive algo
+
+rnn
