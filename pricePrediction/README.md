@@ -13,8 +13,10 @@
     - Using a one layer LSTM with 150 nodes provided the lowest MSE for the data. 
       - This should be tested with multi-variable model.  
     - Using a Stateful RNN (batch memories are passed to the next batch for long term sequences)
-      - TBD
+      - Worked really bad. Maybe we don't need long term sequences for this case. Again, should tested on really short range data. 
+    - Dropout 
+      - Increases MSE but decreases overfitting. It should definitely be included. Tested with 0.3 and 0.1 dropout. 
+  - Normalization 
+    - MinMaxScaler by SKlearn. 
   - Moving forward
     - Should we be using shuffle=False? 
-    - Dropout? 
-    - Initial embedding layer? 
