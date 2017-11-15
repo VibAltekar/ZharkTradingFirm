@@ -12,11 +12,12 @@
     - Multi-layer LSTM's do not perform as well as a one layer LSTM. I tried passing in the output sequences from the initial layers (using Keras' return_sequences=True method) to the next layers, but that increased the MSE. 
     - Using a one layer LSTM with 150 nodes provided the lowest MSE for the data. 
       - This should be tested with multi-variable model.  
-    - Using a Stateful RNN (batch memories are passed to the next batch for long term sequences)
-      - Worked really bad. Maybe we don't need long term sequences for this case. Again, should tested on really short range data. 
     - Dropout 
       - Increases MSE but decreases overfitting. It should definitely be included. Tested with 0.3 and 0.1 dropout. 
   - Normalization 
     - MinMaxScaler by SKlearn. 
-  - Moving forward
-    - Should we be using shuffle=False? 
+    - Differentiation between points (negative or positive increase over period of time).
+
+### Stateful RNN
+  - Results are equivalent to using a stateless network with LSTM's. 
+  - multi-day prediction has a low RMSE for day two and day three (expected). This could be effective for long term intervals with short-term data (within the hour, or maybe even hourly). 
