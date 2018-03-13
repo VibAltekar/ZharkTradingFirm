@@ -1,1 +1,3 @@
-# ZharkTradingFirm
+# ZharkTradingFirm 
+
+Code for crypto HFT 
